@@ -17,11 +17,11 @@ def main():
             print(row)
 
     except scsv.NotSameColNumError:
-        print('[*] Given csv file does not have same column number for all rows.')
+        print('[*] Error: Given csv file does not have same column number for all rows.')
         sys.exit(1)
 
     except scsv.ColIdxOutOfBoundError:
-        print('[*] Given column index exceeds the bound.')
+        print('[*] Error: Given column index exceeds the bound.')
         sys.exit(1)
 
 
