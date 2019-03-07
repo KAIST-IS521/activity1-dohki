@@ -5,7 +5,7 @@ import strictcsv as scsv
 def main():
     assert len(sys.argv) == 3
     [file_name, col_idx] = sys.argv[1:]
-    #TODO: Validate col_idx
+    assert col_idx.isdigit()
 
     try:
         sc = scsv.StrictCsv(file_name)
