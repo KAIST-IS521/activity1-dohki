@@ -5,11 +5,13 @@ import strictcsv as scsv
 def main():
     assert len(sys.argv) == 3
     [file_name, col_idx] = sys.argv[1:]
+
     assert col_idx.isdigit()
+    col_idx = int(col_idx)
 
     try:
         sc = scsv.StrictCsv(file_name)
-        nth_col = sc.get_nth_col(int(col_idx))
+        nth_col = sc.get_nth_col(col_idx)
 
         for row in nth_col:
             print(row)
